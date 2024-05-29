@@ -1,0 +1,62 @@
+:root {
+    /* maybe add a reeds blue custom color */
+    --dark: #262747;
+    --blue: #6C73F3;
+    --green: #62A88D;
+    --off-white: #C0B8C3;
+    --gray: #B7BCF0;
+}
+
+.black-border {
+    border-color: var(--gray);
+}
+
+.blue-background {
+    background-color: var(--dark);
+}
+
+.blue-background:hover {
+    background-color: var(--dark);
+}
+
+.light-blue-background {
+    background-color: var(--blue);
+}
+
+.gray-background {
+    background-color: var(--gray);
+}
+
+.rotate-43 {
+    rotate: 43deg;
+}
+
+.white-filter {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+
+.rotate-icon {
+    animation: gearRotate linear 0.5s;
+}
+
+.rotate-icon-back {
+    animation: gearRotateBack linear 0.5s;
+}
+
+@keyframes gearRotate {
+    0% {
+        rotate: 0;
+    }
+    100% {
+        rotate: 90deg;
+    }
+}
+
+@keyframes gearRotateBack {
+    0% {
+        rotate: 0;
+    }
+    100% {
+        rotate: -90deg;
+    }
+}

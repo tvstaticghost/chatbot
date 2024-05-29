@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test | Assistant</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="text-slate-100 bg-gray-300">
+    <!--chat area-->
+    <main class="flex justify-center mt-20">
+        <!--Reeds Assistant Heading-->
+        <div class="w-96">
+            <div class="flex justify-between p-3 blue-background border-b black-border">
+                <p class="text-xl">Reeds Assistant</p>
+                <img src="assets/gear-fill.svg" alt="settings" class="white-filter w-5 hover:cursor-pointer" id="settingsGear">
+            </div>
+            <div id="conversationOutput" class="flex flex-col items-end p-2 h-96 overflow-y-auto blue-background relative">
+                <!--Settings menu window-->
+                <div id="menuWindow" class="flex items-center justify-center gap-2 p-4 h-15 border-2 border-gray-300 absolute z-10 blue-background hidden">
+                    <span>Dark Mode</span>
+                    <div id="sliderContainer" class="flex items-center justify-end min-w-10 h-6 light-blue-background rounded-full px-1 hover:cursor-pointer">
+                        <div id="slider" class="w-5 blue-background h-5 rounded-full"></div>
+                    </div>
+                </div>
+                <!--This is where the conversation containers will be rendered-->
+            </div>
+            <div class="flex items-center gap-1 w-96 border-t black-border p-2 py-3 blue-background">
+                <input type="text" id="userInput" class="w-80 rounded-3xl pl-4 border-none text-black h-9 gray-background placeholder:text-slate-600 focus:outline-none" placeholder="Your question here...">
+                <button id="sendBtn" class="p-2 rounded-full light-blue-background hover:opacity-75"><img src="assets/send.svg" alt="sendBtn" class="w-5 white-filter rotate-43 -translate-x-0.5 translate-y-0.5"></button>
+            </div>
+        </div>
+        <!--bot button area-->
+        <div class="flex items-end p-2">
+            <span class="relative flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full light-blue-background opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-4 light-blue-background"></span>
+            </span>
+        </div>
+    </main>
+<script src="js/analyzeinput.js"></script>
+<script src="js/main.js"></script>
+<script src="js/settingsMenu.js"></script>
+</body>
+</html>
